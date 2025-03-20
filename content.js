@@ -6,6 +6,19 @@ document.addEventListener('click', (event) => {
   }
 });
 
+// Add the event listener to the document
+document.addEventListener('keydown', function(event) {
+  // Check if the Enter key is pressed
+  if (event.key === 'Enter') {
+    // Check if either Control (Ctrl) or Command (Meta) is also pressed
+    if (event.ctrlKey || event.metaKey) {
+      // Trigger the confetti effect
+      startStrobeLights();
+      setTimeout(launchConfetti, 100); // Delay confetti to ensure layering
+    }
+  }
+});
+
 function launchConfetti() {
   const confettiSettings = {
       particleCount: 500,
