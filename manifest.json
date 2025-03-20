@@ -1,12 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Gmail Confetti",
+  "name": "Confetti Email Sender",
   "version": "1.0",
-  "description": "Celebrate sending emails with confetti!",
+  "description": "Celebrate sending emails with confetti and disco lights!",
   "content_scripts": [
     {
       "matches": ["*://mail.google.com/*"],
       "js": ["confetti.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["confetti.js"],
+      "matches": ["*://mail.google.com/*"]
     }
   ]
 }
