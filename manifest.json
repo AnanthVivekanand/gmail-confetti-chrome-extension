@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Confetti",
+  "version": "1.0",
+  "description": "Celebrate sending emails with confetti!",
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["confetti.js", "content.js"]
+    }
+  ]
+}
